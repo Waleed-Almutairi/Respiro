@@ -1,0 +1,14 @@
+# Build artifacts
+Respiro.app/
+run_tests
+*.o
+*.d
+
+# macOS
+.DS_Store
+
+# Design previews
+logo_preview.html
+
+# Claude Code
+.claude/
