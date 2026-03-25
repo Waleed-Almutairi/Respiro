@@ -4,8 +4,13 @@ A macOS menu bar app that enforces the 20-20-20 rule: every 20 minutes, look at 
 
 ## Screenshots
 
-![Menu bar](assets/screenshots/menubar.png)
-![Break overlay](assets/screenshots/overlay.png)
+Sits quietly in your menu bar, counting down to your next break.
+
+<img src="assets/screenshots/menubar.png" alt="Menu bar" width="600">
+
+Every 20 minutes, a full-screen overlay reminds you to look away.
+
+<img src="assets/screenshots/overlay.png" alt="Break overlay" width="600">
 
 ## Features
 
