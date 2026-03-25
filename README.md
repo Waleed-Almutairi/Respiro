@@ -2,6 +2,11 @@
 
 A macOS menu bar app that enforces the 20-20-20 rule: every 20 minutes, look at something 20 feet away for 20 seconds.
 
+## Screenshots
+
+![Menu bar](assets/screenshots/menubar.png)
+![Break overlay](assets/screenshots/overlay.png)
+
 ## Features
 
 - Lives in the menu bar with a countdown timer
