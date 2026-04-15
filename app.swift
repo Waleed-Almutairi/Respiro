@@ -255,6 +255,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     }
 
     private func tick() {
+        // Idle detection — freeze work timer at full duration when user is away.
+        // Rest phase runs normally regardless (overlay completes on its own).
+        if state.phase == .working && !state.paused {
+            // kCGAnyInputEventType = UInt32.max — "any input event" (keyboard, mouse, trackpad)
+            let anyEventType = CGEventType(rawValue: ~0)!
+            let idleSeconds = CGEventSource.secondsSinceLastEventType(
+                .combinedSessionState, eventType: anyEventType
+            )
+            if idleSeconds > 60 {
+                state.secondsRemaining = TimerState.workDuration
+                updateDisplay()
+                return
+            }
+        }
+
         let transitioned = state.tick()
         updateDisplay()
 
